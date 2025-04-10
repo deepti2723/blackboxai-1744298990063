@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrakeLocation - History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl">
+                <div class="mb-8">
+                    <h1 class="text-center text-4xl font-extrabold text-gray-900 mb-2">
+                        <i class="fas fa-history text-blue-600"></i> Tracking History
+                    </h1>
+                </div>
+
+                <div id="historyContainer" class="space-y-4">
+                    <!-- History items will be dynamically inserted here -->
+                </div>
+
+                <div class="mt-8 flex justify-center space-x-4">
+                    <button onclick="window.location.href='dashboard.html'" 
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Back to Dashboard
+                    </button>
+                    <button id="logoutButton"
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-red-600 bg-red-100 hover:bg-red-200">
+                        <i class="fas fa-sign-out-alt mr-2"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
