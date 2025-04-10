@@ -1,10 +1,10 @@
 // Simulated location data
 const locationDatabase = {
     '+1234567890': {
-        latitude: 40.7128,
-        longitude: -74.0060,
-        city: 'New York',
-        region: 'New York, USA'
+        latitude: 24.5854,
+        longitude: 73.7125,
+        city: 'Udaipur',
+        region: 'Rajasthan, India'
     },
     '+9876543210': {
         latitude: 51.5074,
