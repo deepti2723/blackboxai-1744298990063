@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrakeLocation - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8 bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl">
+            <div>
+                <h1 class="text-center text-4xl font-extrabold text-gray-900 mb-2">
+                    <i class="fas fa-location-dot text-blue-600"></i> TrakeLocation
+                </h1>
+                <h2 class="text-center text-xl font-semibold text-gray-600">Track a Mobile Number</h2>
+            </div>
+            <form class="mt-8 space-y-6" id="trackForm">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div>
+                        <label for="mobileNumber" class="sr-only">Mobile Number</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-mobile-alt text-gray-400"></i>
+                            </div>
+                            <input id="mobileNumber" name="mobileNumber" type="text" required 
+                                class="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                                placeholder="Enter Mobile Number (e.g., +1234567890)">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="trackingError" class="hidden text-red-500 text-sm text-center bg-red-100 p-2 rounded"></div>
+
+                <div id="loadingIndicator" class="hidden">
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-circle-notch fa-spin text-blue-600 text-2xl"></i>
+                        <span class="ml-2 text-gray-600">Tracking location...</span>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" 
+                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                        <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                            <i class="fas fa-search text-blue-500 group-hover:text-blue-400"></i>
+                        </span>
+                        Track
+                    </button>
+                </div>
+            </form>
+            <div class="mt-4 text-center space-x-4">
+                <a href="history.html" class="text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                    <i class="fas fa-history mr-1"></i>
+                    View Tracking History
+                </a>
+                <button id="logoutButton" class="text-red-600 hover:text-red-800 transition-colors duration-200">
+                    <i class="fas fa-sign-out-alt mr-1"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="location.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
